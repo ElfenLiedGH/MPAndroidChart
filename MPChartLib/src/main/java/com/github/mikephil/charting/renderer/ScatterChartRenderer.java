@@ -12,6 +12,7 @@ import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.dataprovider.ScatterDataProvider;
 import com.github.mikephil.charting.interfaces.datasets.IScatterDataSet;
 import com.github.mikephil.charting.renderer.scatter.IShapeRenderer;
+import com.github.mikephil.charting.utils.DrawnLabels;
 import com.github.mikephil.charting.utils.MPPointD;
 import com.github.mikephil.charting.utils.MPPointF;
 import com.github.mikephil.charting.utils.Transformer;
@@ -93,7 +94,7 @@ public class ScatterChartRenderer extends LineScatterCandleRadarRenderer {
     }
 
     @Override
-    public void drawValues(Canvas c) {
+    public void drawValues(Canvas c, DrawnLabels anyValues) {
 
         // if values are drawn
         if (isDrawingValuesAllowed(mChart)) {

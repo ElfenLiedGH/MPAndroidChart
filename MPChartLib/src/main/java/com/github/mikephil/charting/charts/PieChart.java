@@ -14,6 +14,7 @@ import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.highlight.PieHighlighter;
 import com.github.mikephil.charting.interfaces.datasets.IPieDataSet;
 import com.github.mikephil.charting.renderer.PieChartRenderer;
+import com.github.mikephil.charting.utils.DrawnLabels;
 import com.github.mikephil.charting.utils.MPPointF;
 import com.github.mikephil.charting.utils.Utils;
 
@@ -136,7 +137,7 @@ public class PieChart extends PieRadarChartBase<PieData> {
 
         mRenderer.drawExtras(canvas);
 
-        mRenderer.drawValues(canvas);
+        mRenderer.drawValues(canvas, new DrawnLabels());
 
         mLegendRenderer.renderLegend(canvas);
 

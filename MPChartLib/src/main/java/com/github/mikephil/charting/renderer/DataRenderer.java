@@ -14,6 +14,7 @@ import com.github.mikephil.charting.formatter.IValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.dataprovider.ChartInterface;
 import com.github.mikephil.charting.interfaces.datasets.IDataSet;
+import com.github.mikephil.charting.utils.DrawnLabels;
 import com.github.mikephil.charting.utils.MPPointF;
 import com.github.mikephil.charting.utils.Utils;
 import com.github.mikephil.charting.utils.ViewPortHandler;
@@ -133,7 +134,7 @@ public abstract class DataRenderer extends Renderer {
      *
      * @param c
      */
-    public abstract void drawValues(Canvas c);
+    public abstract void drawValues(Canvas c, DrawnLabels drawn);
 
     /**
      * Draws the value of the given entry by using the provided IValueFormatter.

@@ -10,6 +10,7 @@ import com.github.mikephil.charting.data.ChartData;
 import com.github.mikephil.charting.data.CombinedData;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.dataprovider.BarLineScatterCandleBubbleDataProvider;
+import com.github.mikephil.charting.utils.DrawnLabels;
 import com.github.mikephil.charting.utils.ViewPortHandler;
 
 import java.lang.ref.WeakReference;
@@ -42,7 +43,7 @@ public class CombinedChartRenderer extends DataRenderer {
 
         mRenderers.clear();
 
-        CombinedChart chart = (CombinedChart)mChart.get();
+        CombinedChart chart = (CombinedChart) mChart.get();
         if (chart == null)
             return;
 
@@ -90,10 +91,13 @@ public class CombinedChartRenderer extends DataRenderer {
     }
 
     @Override
-    public void drawValues(Canvas c) {
-
-        for (DataRenderer renderer : mRenderers)
-            renderer.drawValues(c);
+    public void drawValues(Canvas c, DrawnLabels anyValues) {
+        DrawnLabels drawnValues = new DrawnLabels();
+        for (DataRenderer renderer : mRenderers) {
+            // Мутируем drawnValues и тогда второй метод не нужен, можно даже один и тот же передавать  без мержа
+            renderer.drawValues(c, drawnValues);
+        }
+        System.out.println("setOfStrs1 = " + drawnValues.getData());
     }
 
     @Override
@@ -115,18 +119,18 @@ public class CombinedChartRenderer extends DataRenderer {
             ChartData data = null;
 
             if (renderer instanceof BarChartRenderer)
-                data = ((BarChartRenderer)renderer).mChart.getBarData();
+                data = ((BarChartRenderer) renderer).mChart.getBarData();
             else if (renderer instanceof LineChartRenderer)
-                data = ((LineChartRenderer)renderer).mChart.getLineData();
+                data = ((LineChartRenderer) renderer).mChart.getLineData();
             else if (renderer instanceof CandleStickChartRenderer)
-                data = ((CandleStickChartRenderer)renderer).mChart.getCandleData();
+                data = ((CandleStickChartRenderer) renderer).mChart.getCandleData();
             else if (renderer instanceof ScatterChartRenderer)
-                data = ((ScatterChartRenderer)renderer).mChart.getScatterData();
+                data = ((ScatterChartRenderer) renderer).mChart.getScatterData();
             else if (renderer instanceof BubbleChartRenderer)
-                data = ((BubbleChartRenderer)renderer).mChart.getBubbleData();
+                data = ((BubbleChartRenderer) renderer).mChart.getBubbleData();
 
             int dataIndex = data == null ? -1
-                    : ((CombinedData)chart.getData()).getAllData().indexOf(data);
+                    : ((CombinedData) chart.getData()).getAllData().indexOf(data);
 
             mHighlightBuffer.clear();
 
