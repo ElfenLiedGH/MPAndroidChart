@@ -10,6 +10,7 @@ import com.github.mikephil.charting.charts.CombinedChart.DrawOrder;
 import com.github.mikephil.charting.data.ChartData;
 import com.github.mikephil.charting.data.CombinedData;
 import com.github.mikephil.charting.highlight.Highlight;
+import com.github.mikephil.charting.utils.DrawnLabels;
 import com.github.mikephil.charting.utils.ViewPortHandler;
 
 import java.lang.ref.WeakReference;
@@ -95,10 +96,11 @@ public class CombinedChartRenderer extends DataRenderer {
     }
 
     @Override
-    public void drawValues(Canvas c) {
+    public void drawValues(Canvas c, DrawnLabels anyData) {
+        DrawnLabels drawnValues = new DrawnLabels();
 
         for (DataRenderer renderer : mRenderers)
-            renderer.drawValues(c);
+            renderer.drawValues(c, drawnValues);
     }
 
     @Override

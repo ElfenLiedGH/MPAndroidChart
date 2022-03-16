@@ -31,6 +31,7 @@ import com.github.mikephil.charting.listener.BarLineChartTouchListener;
 import com.github.mikephil.charting.listener.OnDrawListener;
 import com.github.mikephil.charting.renderer.XAxisRenderer;
 import com.github.mikephil.charting.renderer.YAxisRenderer;
+import com.github.mikephil.charting.utils.DrawnLabels;
 import com.github.mikephil.charting.utils.MPPointD;
 import com.github.mikephil.charting.utils.MPPointF;
 import com.github.mikephil.charting.utils.Transformer;
@@ -271,11 +272,11 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
             clipRestoreCount = canvas.save();
             canvas.clipRect(mViewPortHandler.getContentRect());
 
-            mRenderer.drawValues(canvas);
+            mRenderer.drawValues(canvas, new DrawnLabels());
 
             canvas.restoreToCount(clipRestoreCount);
         } else {
-            mRenderer.drawValues(canvas);
+            mRenderer.drawValues(canvas, new DrawnLabels());
         }
 
         mLegendRenderer.renderLegend(canvas);

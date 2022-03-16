@@ -14,6 +14,7 @@ import com.github.mikephil.charting.highlight.RadarHighlighter;
 import com.github.mikephil.charting.renderer.RadarChartRenderer;
 import com.github.mikephil.charting.renderer.XAxisRendererRadarChart;
 import com.github.mikephil.charting.renderer.YAxisRendererRadarChart;
+import com.github.mikephil.charting.utils.DrawnLabels;
 import com.github.mikephil.charting.utils.Utils;
 
 /**
@@ -150,7 +151,7 @@ public class RadarChart extends PieRadarChartBase<RadarData> {
 
         mYAxisRenderer.renderAxisLabels(canvas);
 
-        mRenderer.drawValues(canvas);
+        mRenderer.drawValues(canvas, new DrawnLabels());
 
         mLegendRenderer.renderLegend(canvas);
 
