@@ -14,7 +14,7 @@ import androidx.core.app.ActivityCompat;
 import android.view.View;
 import android.widget.Toast;
 
-import com.github.mikephil.charting.charts.Chart;
+import com.github.ElfenLiedGH.charting.charts.Chart;
 import com.xxmassdeveloper.mpchartexample.R;
 
 /**

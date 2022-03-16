@@ -15,16 +15,16 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.formatter.IFillFormatter;
-import com.github.mikephil.charting.interfaces.dataprovider.LineDataProvider;
-import com.github.mikephil.charting.interfaces.datasets.IDataSet;
-import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.github.ElfenLiedGH.charting.charts.LineChart;
+import com.github.ElfenLiedGH.charting.components.XAxis;
+import com.github.ElfenLiedGH.charting.components.YAxis;
+import com.github.ElfenLiedGH.charting.data.Entry;
+import com.github.ElfenLiedGH.charting.data.LineData;
+import com.github.ElfenLiedGH.charting.data.LineDataSet;
+import com.github.ElfenLiedGH.charting.formatter.IFillFormatter;
+import com.github.ElfenLiedGH.charting.interfaces.dataprovider.LineDataProvider;
+import com.github.ElfenLiedGH.charting.interfaces.datasets.IDataSet;
+import com.github.ElfenLiedGH.charting.interfaces.datasets.ILineDataSet;
 import com.xxmassdeveloper.mpchartexample.notimportant.DemoBase;
 
 import java.util.ArrayList;

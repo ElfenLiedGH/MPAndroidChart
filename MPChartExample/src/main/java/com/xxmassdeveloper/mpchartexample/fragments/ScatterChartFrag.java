@@ -8,11 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.mikephil.charting.charts.ScatterChart;
-import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.components.XAxis.XAxisPosition;
-import com.github.mikephil.charting.components.YAxis;
+import com.github.ElfenLiedGH.charting.charts.ScatterChart;
+import com.github.ElfenLiedGH.charting.components.Legend;
+import com.github.ElfenLiedGH.charting.components.XAxis;
+import com.github.ElfenLiedGH.charting.components.XAxis.XAxisPosition;
+import com.github.ElfenLiedGH.charting.components.YAxis;
 import com.xxmassdeveloper.mpchartexample.R;
 import com.xxmassdeveloper.mpchartexample.custom.MyMarkerView;
 

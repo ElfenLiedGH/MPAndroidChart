@@ -1,8 +1,8 @@
 package com.xxmassdeveloper.mpchartexample.custom;
 
-import com.github.mikephil.charting.components.AxisBase;
-import com.github.mikephil.charting.formatter.IAxisValueFormatter;
-import com.github.mikephil.charting.utils.ViewPortHandler;
+import com.github.ElfenLiedGH.charting.components.AxisBase;
+import com.github.ElfenLiedGH.charting.formatter.IAxisValueFormatter;
+import com.github.ElfenLiedGH.charting.utils.ViewPortHandler;
 
 import java.text.DecimalFormat;
 

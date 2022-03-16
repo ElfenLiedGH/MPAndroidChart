@@ -14,19 +14,19 @@ import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.components.Legend.LegendForm;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.components.YAxis.AxisDependency;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.highlight.Highlight;
-import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
-import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
-import com.github.mikephil.charting.utils.ColorTemplate;
+import com.github.ElfenLiedGH.charting.charts.LineChart;
+import com.github.ElfenLiedGH.charting.components.Legend;
+import com.github.ElfenLiedGH.charting.components.Legend.LegendForm;
+import com.github.ElfenLiedGH.charting.components.XAxis;
+import com.github.ElfenLiedGH.charting.components.YAxis;
+import com.github.ElfenLiedGH.charting.components.YAxis.AxisDependency;
+import com.github.ElfenLiedGH.charting.data.Entry;
+import com.github.ElfenLiedGH.charting.data.LineData;
+import com.github.ElfenLiedGH.charting.data.LineDataSet;
+import com.github.ElfenLiedGH.charting.highlight.Highlight;
+import com.github.ElfenLiedGH.charting.interfaces.datasets.ILineDataSet;
+import com.github.ElfenLiedGH.charting.listener.OnChartValueSelectedListener;
+import com.github.ElfenLiedGH.charting.utils.ColorTemplate;
 import com.xxmassdeveloper.mpchartexample.notimportant.DemoBase;
 
 public class RealtimeLineChartActivity extends DemoBase implements
