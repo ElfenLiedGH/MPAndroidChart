@@ -15,7 +15,10 @@ import com.github.mikephil.charting.utils.ViewPortHandler;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * Renderer class that is responsible for rendering multiple different data-types.
@@ -101,6 +104,8 @@ public class CombinedChartRenderer extends DataRenderer {
 
         for (DataRenderer renderer : mRenderers)
             renderer.drawValues(c, drawnValues);
+        Map<Integer, HashSet<Integer>> treeMap = new TreeMap<>(drawnValues.getData());
+//        System.out.println("drawnValues: " + treeMap);
     }
 
     @Override

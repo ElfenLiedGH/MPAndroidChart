@@ -110,7 +110,8 @@ public class CombinedChartActivity extends DemoBase {
         ArrayList<Entry> entries = new ArrayList<>();
 
         for (int index = 0; index < count; index++)
-            entries.add(new Entry(index + 0.5f, getRandom(15, 5)));
+            entries.add(new Entry(index + 0.5f, getRandom(0, 25)));
+//            entries.add(new Entry(index + 0.5f, getRandom(15, 5)));
 
         LineDataSet set = new LineDataSet(entries, "Line DataSet");
         set.setColor(Color.rgb(240, 238, 70));
@@ -135,7 +136,8 @@ public class CombinedChartActivity extends DemoBase {
         ArrayList<BarEntry> entries2 = new ArrayList<>();
 
         for (int index = 0; index < count; index++) {
-            entries1.add(new BarEntry(0, getRandom(25, 25)));
+            entries1.add(new BarEntry(0, getRandom(0, 25)));
+//            entries1.add(new BarEntry(0, getRandom(25, 25)));
 
             // stacked
             entries2.add(new BarEntry(0, new float[]{getRandom(13, 12), getRandom(13, 12)}));

@@ -450,7 +450,7 @@ public class BarChartRenderer extends BarLineScatterCandleBubbleRenderer {
     @Override
     public void drawValue(Canvas c, String valueText, float x, float y, int color) {
         mValuePaint.setColor(color);
-        c.drawText(valueText+"test", x, y, mValuePaint);
+        c.drawText(valueText, x, y, mValuePaint);
     }
 
     @Override
